@@ -22,7 +22,7 @@ api = tweepy.API(auth)
 
 list_tweets = []
 list_tweets_emotion = []
-for mytweets in tweepy.Cursor(api.search, q='#TerrorismHasNoReligion', lang='en').items(2):
+for mytweets in tweepy.Cursor(api.search, q='#TerrorismHasNoReligion', lang='en').items(100):
 	tweet_data = unicode(mytweets.text).encode('utf-8')
 	list_tweets.append(tweet_data)
 	temp_emotion_tweet = []
